@@ -44,6 +44,9 @@ const forms = (state) => {
         .then((res) => {
           console.log(res);
           statusMessage.textContent = message.success;
+          for (let key in state) {
+            state[key] = "";
+          }
         })
         .catch(() => (statusMessage.textContent = message.failure))
         .finally(() => {
@@ -51,6 +54,7 @@ const forms = (state) => {
           setTimeout(() => {
             statusMessage.remove();
           }, 3000);
+          console.log(state);
         });
     });
   });

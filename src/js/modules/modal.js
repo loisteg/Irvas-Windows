@@ -3,7 +3,8 @@ const modals = () => {
     triggerSelector,
     modalSelector,
     closeSelector,
-    closeClickOverlay = true
+    closeClickOverlay = true,
+    formWasPushed
   ) {
     const triggers = document.querySelectorAll(triggerSelector),
       modal = document.querySelector(modalSelector),
